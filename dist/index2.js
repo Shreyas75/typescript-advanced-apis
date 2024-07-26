@@ -14,7 +14,12 @@ const userss = {
 };
 // Map is a js concept
 const newUsers = new Map();
-newUsers.set("ras@asd", { age: 21, name: "Shreyas" });
-newUsers.set("shrey@as", { age: 22, name: "brian" });
+newUsers.set("ras@asd", { age: 21, name: "Shreyas", email: "ras@asd" });
+newUsers.set("shrey@as", { age: 22, name: "brian", email: "shrey@as" });
 const newuser = newUsers.get("ras@asd");
 console.log(newuser);
+const handleEvent = (event) => {
+    console.log(`Handling event: ${event}`);
+};
+handleEvent('click'); // OK
+// handleEvent('scroll'); // NOT-OK

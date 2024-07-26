@@ -55,3 +55,18 @@ newUsers.set("shrey@as", {age: 22, name: "brian",  email: "shrey@as"})
 
 const newuser = newUsers.get("ras@asd")
 console.log(newuser);
+
+
+
+//
+
+type EventType = 'click' | 'scroll' | 'mousemove';
+type ExcludeEvent = Exclude<EventType, 'scroll'>; // 'click' | 'mousemove'
+
+const handleEvent = (event: ExcludeEvent) => {
+  console.log(`Handling event: ${event}`);
+};
+
+handleEvent('click'); // OK
+// handleEvent('scroll'); // NOT-OK
+
